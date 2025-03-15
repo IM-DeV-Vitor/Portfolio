@@ -40,7 +40,7 @@ h2 {
     font-family: "Barlow";
 }
 
-p {
+.paragrafo-artigo {
     margin-bottom: 10px;
     text-align: justify;
 }
@@ -112,14 +112,6 @@ a:hover {
     transform: scale(1.05);
 }
 
-footer {
-    text-align: center;
-    padding: 15px;
-    background: black;
-    color: white;
-    margin-top: 30px;
-}
-
 ul {
     list-style-position: inside;
 }
@@ -166,4 +158,16 @@ li {
 
 li::before {
     content: "✔️";
+}
+
+
+footer {
+    padding: 15px;
+    background: black;
+    color: white;
+    margin-top: 30px;
+}
+
+.paragrafo-rodape {
+    text-align: center;
 }
