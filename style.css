@@ -34,11 +34,12 @@ header h1 {
 
 .container {
     overflow-x: hidden;
+    max-width: 100%;
     padding: 20px;
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    margin: 30px;
+    margin: 10px;
 }
 
 h2 {
