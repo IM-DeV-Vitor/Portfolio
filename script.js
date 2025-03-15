@@ -1,5 +1,5 @@
 var time = new Date()
-var hours = 19//time.getHours()
+var hours = time.getHours()
 var span = document.getElementById("alter")
 
 if (hours < 12){

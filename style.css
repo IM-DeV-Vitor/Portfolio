@@ -42,6 +42,7 @@ h2 {
 
 p {
     margin-bottom: 10px;
+    text-align: justify;
 }
 
 ul {
@@ -49,14 +50,12 @@ ul {
 }
 
 .pc-imagem {
-    width: 320px;
-    height: 186px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
     border-radius: 25px;
     transition-duration: 0.5s;
     padding: 20px;
-    position: relative;
-    left: 50%;
-    transform: translate( -50%);
 }
 
 .contato-imagem {
