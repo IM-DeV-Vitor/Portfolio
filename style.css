@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Teko:wght@300..700&display=swap');
 
 *{
     margin: 0;
@@ -19,7 +10,20 @@
 body {
     font-family: sans-serif;
     max-height: 100vh;
-    background-color: rgba(255, 255, 0, 0.512);
+}
+
+header {
+    height: 175px;
+    background-color: #5712FF;
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    font-family: "Teko";
 }
 
 .container {
@@ -33,6 +37,7 @@ body {
 
 h2 {
     margin-bottom: 20px;
+    font-family: "Barlow";
 }
 
 p {
@@ -43,9 +48,27 @@ ul {
     margin-bottom: 10px;
 }
 
-img {
+.pc-imagem {
+    width: 320px;
+    height: 186px;
+    border-radius: 25px;
+    transition-duration: 0.5s;
+    padding: 20px;
+    position: relative;
+    left: 50%;
+    transform: translate( -50%);
+}
+
+.contato-imagem {
     width: 100px;
     height: 100px;
+    transition-duration: 0.5s;
+}
+
+.img-MQMQ {
+    width: 50px;
+    height: 50px;
+    transition-duration: 0.5s;
 }
 
 .contato {
@@ -59,7 +82,7 @@ a {
 
 a:hover {
     transition: 0.5s ease;
-    color: gray;
+    text-decoration: underline;
 }
 
 .contato a {
@@ -98,20 +121,6 @@ footer {
     margin-top: 30px;
 }
 
-.saudações {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Barlow', sans-serif;
-    text-align: center;
-    margin-bottom: 40px;
-    background-color: yellow;
-    padding: 30px;
-    border-radius: 15px;
-    opacity: 0;
-    animation: fadeInUp 1s ease-out forwards;
-}
-
 ul {
     list-style-position: inside;
 }
@@ -123,4 +132,39 @@ ul {
 
 .githublink:hover {
     text-decoration: underline;
+}
+
+img:hover {
+    padding: 5px;
+}
+
+article {
+    padding: 20px;
+}
+
+.sobre-mim {
+    background-color: #5712FF;
+    color: white;
+    border-radius: 5px;
+}
+
+.contato {
+    padding: 0px 15px;
+    font-size: 1.3em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding-left: 20px;
+    margin: 10px;
+    text-indent: -0.7rem;
+}
+
+li::before {
+    content: "✔️";
 }
