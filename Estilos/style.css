@@ -92,11 +92,12 @@ section > article > p.paragrafo-artigo {
 }
 
 section > picture > img.pc-imagem {
-    display: block;
-    margin: auto;
-    margin-top: 15px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
     border-radius: 25px;
     transition-duration: 0.5s;
+    padding: 20px;
 }
 
 section > article > a > img.contato-imagem {
