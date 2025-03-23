@@ -1,8 +1,8 @@
-var time = new Date()
-var hours = time.getHours()
-var span = document.getElementById("alter")
-var header = document.getElementById("saudar")
-var sobre_mim = document.getElementById("sobre-mim")
+const time = new Date()
+const hours = time.getHours()
+const span = document.getElementById("alter")
+const header = document.getElementById("saudar")
+const sobre_mim = document.getElementById("sobre-mim")
 
 if (hours < 13){
     document.body.style.backgroundColor = "#B1E602"
