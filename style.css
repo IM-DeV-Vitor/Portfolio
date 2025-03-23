@@ -25,13 +25,13 @@ header {
     color: white;
 }
 
-header h1 {
+header > main > h1 {
     display: flex;
     justify-content: center;
     font-family: "Teko";
 }
 
-.container {
+section.container {
     overflow-x: hidden;
     max-width: 100%;
     padding: 20px;
@@ -41,25 +41,21 @@ header h1 {
     margin: 10px;
 }
 
-h2 {
+section.container > article > h2 {
     margin-bottom: 20px;
     font-family: "Barlow";
 }
 
-p {
+section p, footer p {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-.paragrafo-artigo {
+section > article > p.paragrafo-artigo {
     margin-bottom: 10px;
     text-align: justify;
 }
 
-ul {
-    margin-bottom: 10px;
-}
-
-.pc-imagem {
+section > picture > img.pc-imagem {
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -68,49 +64,48 @@ ul {
     padding: 20px;
 }
 
-.contato-imagem {
+section > article > a > img.contato-imagem {
     width: 100px;
     height: 100px;
     transition-duration: 0.5s;
 }
 
-.img-MQMQ {
+header > main > div > img.img-MQMQ {
     width: 50px;
     height: 50px;
     transition-duration: 0.5s;
     cursor: pointer;
 }
 
-.contato {
+section > article.contato {
     text-align: center;
 }
 
-a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-a:hover {
-    transition: 0.5s ease;
-    text-decoration: underline;
-}
-
-.contato a {
+section > article.contato > a {
     margin: 10px;
     display: inline-block;
 }
 
-.contato h2 {
+section > article.contato > h2 {
     margin-top: 20px;
 }
 
-.projetos {
+a.link_informativo, a.githublink, a.projeto {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a.link_informativo:hover {
+    text-decoration: underline;
+}
+
+section > article.sobre-mim > div.projetos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.projetos a {
+section > article.sobre-mim > div.projetos > a {
     display: block;
     padding: 15px;
     background: white;
@@ -120,55 +115,55 @@ a:hover {
     color: black;
 }
 
-.projetos a:hover {
+section > article.sobre-mim > div.projetos > a:hover {
     transform: scale(1.05);
 }
 
-ul {
+section > article > ul {
     list-style-position: inside;
+    margin-bottom: 10px;
 }
 
-.githublink {
+footer > p > a.githublink {
     color: white;
     font-weight: bold;
 }
 
-.githublink:hover {
+footer > p > i > a.githublink:hover {
     text-decoration: underline;
 }
 
 img:hover {
-    padding: 5px;
+    padding: 3px;
 }
 
 article {
     padding: 20px;
 }
 
-.sobre-mim {
+section > article.sobre-mim {
     color: white;
     border-radius: 5px;
 }
 
-.contato {
+section > article.contato {
     padding: 0px 15px;
     font-size: 1.3em;
 }
 
-ul {
+ul.pai-areas {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-li {
+li.filho-areas {
     margin: 10px;
 }
 
-li::before {
+li.filho-areas::before {
     content: "✓ ";
 }
-
 
 footer {
     padding: 15px;
@@ -177,11 +172,6 @@ footer {
     margin-top: 30px;
 }
 
-.paragrafo-rodape {
+footer > p.paragrafo-rodape {
     text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
