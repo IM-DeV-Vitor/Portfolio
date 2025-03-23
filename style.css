@@ -31,6 +31,17 @@ header > main > h1 {
     font-family: "Teko";
 }
 
+header > main > div > img.img-MQMQ {
+    width: 50px;
+    height: 50px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+img:hover {
+    padding: 3px;
+}
+
 section.container {
     overflow-x: hidden;
     max-width: 100%;
@@ -44,6 +55,17 @@ section.container {
 section.container > article > h2 {
     margin-bottom: 20px;
     font-family: "Barlow";
+}
+
+
+section > article.sobre-mim {
+    color: white;
+    border-radius: 5px;
+}
+
+section > article.contato {
+    padding: 0px 15px;
+    font-size: 1.3em;
 }
 
 section p, footer p {
@@ -70,13 +92,6 @@ section > article > a > img.contato-imagem {
     transition-duration: 0.5s;
 }
 
-header > main > div > img.img-MQMQ {
-    width: 50px;
-    height: 50px;
-    transition-duration: 0.5s;
-    cursor: pointer;
-}
-
 section > article.contato {
     text-align: center;
 }
@@ -90,12 +105,12 @@ section > article.contato > h2 {
     margin-top: 20px;
 }
 
-a.link_informativo, a.githublink, a.projeto {
+section > article > ul > li > strong > a.link_informativo, a.githublink, a.projeto {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
-a.link_informativo:hover {
+section > article > ul > li > strong > a.link_informativo:hover {
     text-decoration: underline;
 }
 
@@ -124,6 +139,24 @@ section > article > ul {
     margin-bottom: 10px;
 }
 
+section > article > ul.pai-areas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section > article > ul > li.filho-areas {
+    margin: 10px;
+}
+
+section > article > ul > li.filho-areas::before {
+    content: "✓ ";
+}
+
+article {
+    padding: 20px;
+}
+
 footer > p > a.githublink {
     color: white;
     font-weight: bold;
@@ -131,38 +164,6 @@ footer > p > a.githublink {
 
 footer > p > i > a.githublink:hover {
     text-decoration: underline;
-}
-
-img:hover {
-    padding: 3px;
-}
-
-article {
-    padding: 20px;
-}
-
-section > article.sobre-mim {
-    color: white;
-    border-radius: 5px;
-}
-
-section > article.contato {
-    padding: 0px 15px;
-    font-size: 1.3em;
-}
-
-ul.pai-areas {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li.filho-areas {
-    margin: 10px;
-}
-
-li.filho-areas::before {
-    content: "✓ ";
 }
 
 footer {
