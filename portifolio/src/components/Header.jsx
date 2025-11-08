@@ -14,7 +14,7 @@ export default function Header() {
                 <img src={catImage} alt="Imagem de um Octocat detetive" />
             </div>
             <div className={styles.alignedItems}>
-            <h1>Hey There!</h1>
+            <h1>Hey There! 👋</h1>
             <nav>
                 <div className={styles.iconnedLink}><a href="#">Home</a> <FaHome /></div>
                 <div className={styles.iconnedLink}><a href="#">About</a> <FaQuestion /></div>

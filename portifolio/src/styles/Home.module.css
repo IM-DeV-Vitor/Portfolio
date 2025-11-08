@@ -2,7 +2,7 @@
 
 div.homeContainer {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column;
   height: 100vh;
   background: #0e0e0e;
   font-family: monospace;
@@ -15,9 +15,9 @@ div.textItems {
   flex-direction: column;
   height: 100vh; 
   color: white;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding-left: 10vw;
+  padding-left: 1rem;
 }
 
 div.textItems h2 {
@@ -25,7 +25,7 @@ div.textItems h2 {
   width: 30ch; 
   text-align: left;
   overflow: hidden;
-  white-space: wrap;
+  text-align: center;
 }
 
 
@@ -39,12 +39,13 @@ span.cursor {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  display: inline-block;
   font-size: 15em;
   margin: auto;
   perspective: 1000px;
@@ -59,28 +60,6 @@ span.cursor {
   filter: drop-shadow(0 0 10px lime);
 }
 
-.iconWrapper::before {
-  content: "";
-  position: absolute;
-  top: var(--y, 50%);
-  left: var(--x, 50%);
-  width: 150%;
-  height: 150%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 255, 0, 0.15) 20%,
-    transparent 60%
-  );
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-
-.iconWrapper:hover::before {
-  opacity: 1;
-}
-
 div.countryData {
     display: flex;
     justify-content: center;
@@ -89,6 +68,7 @@ div.countryData {
     color: lime;
     font-weight: 600;
     font-size: 1.5em;
+    padding: 20px;
 }
 
 
