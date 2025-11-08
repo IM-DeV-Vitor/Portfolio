@@ -22,10 +22,10 @@ div.textItems {
 
 div.textItems h2 {
   font-family: 'Courier New', monospace;
-  max-width: 200px;
-  margin-top: 10px;
+  width: 30ch; 
   text-align: left;
   overflow: hidden;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -69,7 +69,6 @@ div.countryData {
     color: lime;
     font-weight: 600;
     font-size: 1.5em;
-    padding: 20px;
 }
 
 
@@ -80,4 +79,10 @@ div.countryData {
   50.01%, 100% {
     opacity: 0;
   }
+}
+
+@media screen and (max-width: 400px) {
+    .textItems h2 {
+      width: 30ch; 
+    }
 }
