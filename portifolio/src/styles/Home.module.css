@@ -22,7 +22,8 @@ div.textItems {
 
 div.textItems h2 {
   font-family: 'Courier New', monospace;
-  width: 30ch; 
+  max-width: 200px;
+  margin-top: 10px;
   text-align: left;
   overflow: hidden;
   text-align: center;
