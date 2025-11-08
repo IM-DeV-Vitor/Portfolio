@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+div.homeContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100vh;
+  background: #0e0e0e;
+  font-family: monospace;
+  gap: 0 2em;
+  justify-content: space-around;
+}
+
+div.textItems {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  color: white;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10vw;
+}
+
+div.textItems h2 {
+  font-family: 'Courier New', monospace;
+  width: 30ch; 
+  text-align: left;
+  overflow: hidden;
+  white-space: wrap;
+}
+
+
+span.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 0.8s infinite;
+}
+
+.countryBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.iconWrapper {
+  position: relative;
+  display: inline-block;
+  font-size: 15em;
+  margin: auto;
+  perspective: 1000px;
+}
+
+.brazilIcon {
+  transition: filter 0.1s ease;
+  filter: drop-shadow(0 0 3px lime);
+}
+
+.brazilIcon:hover {
+  filter: drop-shadow(0 0 10px lime);
+}
+
+.iconWrapper::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 0, 0.15) 20%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.iconWrapper:hover::before {
+  opacity: 1;
+}
+
+div.countryData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    color: lime;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.01%, 100% {
+    opacity: 0;
+  }
+}
