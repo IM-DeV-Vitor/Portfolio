@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     padding: 0;
@@ -31,6 +31,17 @@ div.headerContainer h1 {
     text-align: center;
     padding: 10px;
     font-family: Nunito;
+}
+
+.introText {
+  font-family: Saira, sans-serif;
+  font-weight: 800;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: boomIn 0.8s ease-out forwards, glow 2s infinite alternate;
 }
 
 nav {
@@ -127,4 +138,27 @@ div.menuIconBox {
     to {
         height: 100%;
     }
+}
+
+@keyframes boomIn {
+  0% {
+    transform: scale(0.5) translateY(50px);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1) translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 5px lime, 0 0 10px lime;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px limegreen, 0 0 20px limegreen;
+  }
 }
