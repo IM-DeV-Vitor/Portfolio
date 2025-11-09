@@ -61,6 +61,12 @@ nav a:hover::after {
     width: 100%;
 }
 
+nav.compactNav {
+    display: none;
+    flex-flow: column nowrap;
+    gap: 10px 0;
+}
+
 div.iconnedLink {
     display: flex;
     gap: 0 5px;
@@ -70,8 +76,25 @@ div.iconnedLink {
     font-weight: 500;
 }
 
+div.menuIconBox {
+    display: none;
+}
+
+.menuIcon {
+    transition: all .3s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menuIcon:hover {
+    transform: scale(1.2);
+}
+
+.animatedClass {
+    animation: openingMenu .3s ease-in forwards;
+}
+
 @media screen and (max-width: 610px) {
-    div.imgContainer, p {
+    div.imgContainer, .headerContainer p {
         display: none;
     }
 
@@ -83,32 +106,24 @@ div.iconnedLink {
 
 @media screen and (max-width: 500px) {
     nav {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding: 0 20px;
-        gap: .8em;
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory; 
-        scrollbar-width: thin;
-        scrollbar-color: white transparent;
+        display: none;
     }
 
-    nav::-webkit-scrollbar {
-        padding: 20px;
-    }
-
-    nav::-webkit-scrollbar-thumb {
-        background-color: white;
-        border-radius: 10px;
-    }
-
-    nav::-webkit-scrollbar-track {
-        background: transparent;
+    div.menuIconBox {
+        display: block;
     }
 
     .iconnedLink {
         flex: 0 0 auto;
         scroll-snap-align: start;
+    }
+}
+
+@keyframes openingMenu {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
     }
 }

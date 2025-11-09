@@ -6,7 +6,6 @@ div.homeContainer {
   background: #0e0e0e;
   font-family: monospace;
   justify-content: space-around;
-  max-width: 100vw;
   min-height: 100vh;
 }
 
