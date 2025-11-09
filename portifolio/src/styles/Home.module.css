@@ -5,8 +5,8 @@ div.homeContainer {
   flex-flow: row wrap;
   background: #0e0e0e;
   font-family: monospace;
-  justify-content: space-around;
   min-height: 100vh;
+  justify-content: center;
 }
 
 div.textItems {
