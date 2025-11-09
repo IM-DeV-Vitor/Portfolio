@@ -64,6 +64,7 @@ nav a:hover::after {
 nav.compactNav {
     display: none;
     flex-flow: column nowrap;
+    margin-top: 1em;
     gap: 10px 0;
 }
 
