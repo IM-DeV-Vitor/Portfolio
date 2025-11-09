@@ -3,19 +3,10 @@ import { useState, useEffect, useRef } from "react";
 import { GiBrazil } from "react-icons/gi";
 
 export default function Home() {
-  const wrapperRef = useRef(null);
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [speed, setSpeed] = useState(150);
-
-  function handleMove(e) {
-    const rect = wrapperRef.current.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    wrapperRef.current.style.setProperty("--x", `${x}%`);
-    wrapperRef.current.style.setProperty("--y", `${y}%`);
-  }
 
   const phrases = [
     "Backend Developer",
@@ -61,9 +52,7 @@ export default function Home() {
           <p>I'm From</p>
           <div className={styles.countryBox}>
             <div
-              ref={wrapperRef}
               className={styles.iconWrapper}
-              onMouseMove={handleMove}
             >
               <GiBrazil
                 className={styles.brazilIcon}
